@@ -1,0 +1,28 @@
+{
+  "name": "SearchAlready!",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "Allows you to search really quickly when you open a website.",
+  "homepage_url": "http://gamlielcohen.com",
+  "icons": {
+    "16": "icons/SearchAlready-16.png",
+    "48": "icons/SearchAlready-48.png",
+    "128": "icons/SearchAlready-128.png"
+  },
+  "default_locale": "en",
+  "browser_action": {
+    "default_icon": "icons/SearchAlready-19.png",
+    "default_title": "page action demo",
+    "default_popup": "src/page_action/page_action.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["js/main.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "permissions": [
+    "clipboardRead"
+  ]
+}
